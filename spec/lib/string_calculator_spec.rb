@@ -9,4 +9,11 @@ describe 'StringCalculator' do
         expect(StringCalculator.add("5")).to eq(5)
     end
     
+    it 'returns number when multiple number string provided' do
+        expect(StringCalculator.add("1,2,3")).to eq(6)
+    end
+    
+    it 'returns number when new line delimiter in numbers string provided' do
+        expect(StringCalculator.add("1\n2,3")).to eq(6)
+    end
 end
